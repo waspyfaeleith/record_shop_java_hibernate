@@ -10,7 +10,7 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class DBAlbum {
-    public void saveAlbum(Album album) {
+    public static void saveAlbum(Album album) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -26,7 +26,7 @@ public class DBAlbum {
         }
     }
 
-    public List<Album> getAlbums()
+    public static List<Album> getAlbums()
     {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -44,7 +44,7 @@ public class DBAlbum {
         return albums;
     }
 
-    public Album getAlbumById(int id)
+    public static Album getAlbumById(int id)
     {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -65,7 +65,7 @@ public class DBAlbum {
         return album;
     }
 
-    public void deleteAlbum(int id)
+    public static void deleteAlbum(int id)
     {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -86,7 +86,7 @@ public class DBAlbum {
         }
     }
 
-    public void updateAlbum(Album album) {
+    public static void updateAlbum(Album album) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
         try {

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="centered">
+        <p class="answerIntro">Albums</p>
+          #foreach($album in $albums )
+            <p class="artist">$album.getTitle() : $album.getArtist().getName()</p>
+            <a href="/albums/$album.getId()" class="button center">Details</a>
+          #end
+    </div>
+    <div>
+        <a href="/albums/new" class="button center">New Album</a>
+    </div>
+</div>
