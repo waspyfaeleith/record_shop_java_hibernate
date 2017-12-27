@@ -9,7 +9,7 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class DBArtist {
-    public void saveArtist(Artist artist) {
+    public static void saveArtist(Artist artist) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -25,7 +25,7 @@ public class DBArtist {
         }
     }
 
-    public List<Artist> getArtists()
+    public static List<Artist> getArtists()
     {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -43,7 +43,7 @@ public class DBArtist {
         return artists;
     }
 
-    public Artist getArtistById(int id)
+    public static Artist getArtistById(int id)
     {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -64,7 +64,7 @@ public class DBArtist {
         return artist;
     }
 
-    public void deleteArtist(int id)
+    public static void deleteArtist(int id)
     {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -85,7 +85,7 @@ public class DBArtist {
         }
     }
 
-    public void updateArtist(Artist artist) {
+    public static void updateArtist(Artist artist) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
         try {

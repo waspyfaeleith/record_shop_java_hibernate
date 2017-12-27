@@ -1,6 +1,7 @@
 package db;
 
 import models.Album;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
