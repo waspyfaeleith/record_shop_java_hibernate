@@ -7,7 +7,7 @@ create a PostgreSQL database called "recordshop"
 
 To create the tables you then need to run the sql file:
 
-psql -d recordshop -f record_shop.sql
+`psql -d recordshop -f record_shop.sql`
 
 This was built in IntelliJ IDEA Community Edition.
 
