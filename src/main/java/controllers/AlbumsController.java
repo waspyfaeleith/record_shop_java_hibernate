@@ -23,12 +23,6 @@ public class AlbumsController {
     private void setupEndpoints() {
         //staticFileLocation("/public");
 
-        get("/", (req, res) -> {
-            Map<String, Object> model = new HashMap<>();
-            model.put("template", "templates/main.vtl");
-            return new ModelAndView(model, "templates/layout.vtl");
-        }, new VelocityTemplateEngine());
-
         get("/albums/:id/edit", (req, res) -> {
             List<Artist> artists = DBArtist.getArtists();
             Album album = DBAlbum.getAlbumById(Integer.parseInt(req.params(":id")));
@@ -73,7 +67,7 @@ public class AlbumsController {
         post ("/albums", (req, res) -> {
             System.out.println(req);
             Artist artist = DBArtist.getArtistById(Integer.parseInt(req.queryParams("artist")));
-            Album album = new Album(req.queryParams("title"),artist );
+            Album album = new Album(req.queryParams("title"),artist,Integer.parseInt(req.queryParams("quantity")));
             DBAlbum.saveAlbum(album);
             res.redirect("/albums");
             return null;
@@ -84,6 +78,7 @@ public class AlbumsController {
             Artist artist = DBArtist.getArtistById(Integer.parseInt(req.queryParams("artist")));
             album.setTitle(req.queryParams("title"));
             album.setArtist(artist);
+            album.setQuantity(Integer.parseInt(req.queryParams("quantity")));
             DBAlbum.updateAlbum(album);
             res.redirect("/albums");
             return null;

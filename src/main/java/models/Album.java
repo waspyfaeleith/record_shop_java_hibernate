@@ -4,14 +4,16 @@ public class Album {
     private int id;
     private String title;
     private Artist artist;
+    private int quantity;
 
     public Album() {
 
     }
 
-    public Album(String title, Artist artist) {
+    public Album(String title, Artist artist, int quantity) {
         this.title = title;
         this.artist = artist;
+        this.quantity = quantity;
     }
 
     public int getId() {
@@ -36,5 +38,23 @@ public class Album {
 
     public void setArtist(Artist artist) {
         this.artist = artist;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String stockLevel() {
+        if (quantity >= 10) {
+            return "High";
+        } else if (quantity >= 5) {
+            return "Medium";
+        } else {
+            return "Low";
+        }
     }
 }

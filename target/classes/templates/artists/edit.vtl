@@ -1,7 +1,6 @@
 <form action="/artists/$artist.getId()" method="post">
-    <fieldset>
-        <p>Name</p>
+        <label for="name">Name:</label>
         <input type="text" name="name" required="true" value=$artist.getName()>
-        <input type="submit" value="submit">
-    </fieldset>
+
+    <input type="submit" value="submit">
 </form>

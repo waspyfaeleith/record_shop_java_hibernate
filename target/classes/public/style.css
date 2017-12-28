@@ -1,5 +1,5 @@
 body {
-    background-color : green;
+    /*background-color : green;*/
     font-family: Verdana, Arial, Helvetica, sans-serif;
     align : center;
 }
@@ -31,7 +31,7 @@ body {
 .answerIntro {
     font: bold 2.5em Arial;
     text-align: center;
-    color: yellow;
+    /*color: yellow;*/
     margin-top: 50px;
 }
 

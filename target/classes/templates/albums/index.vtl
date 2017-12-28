@@ -2,7 +2,7 @@
     <div class="centered">
         <p class="answerIntro">Albums</p>
           #foreach($album in $albums )
-            <p class="artist">$album.getTitle() : $album.getArtist().getName()</p>
+            <p class="artist">$album.getTitle() : $album.getArtist().getName() $album.stockLevel()</p>
             <a href="/albums/$album.getId()" class="button center">Details</a>
           #end
     </div>

@@ -15,13 +15,13 @@ public class Main {
         artist.setName("Iron Maiden");
         DBArtist.updateArtist(artist);
 
-        Album album = new Album("Number of the Beast", artist);
+        Album album = new Album("Number of the Beast", artist,3);
         dbAlbum.saveAlbum(album);
 
         Artist artist2 = DBArtist.getArtistById(2);
         System.out.println(artist2.getId() + " : " + artist2.getName());
 
-        Album album2 = new Album("Back in Black", artist2);
+        Album album2 = new Album("Back in Black", artist2,5);
         dbAlbum.saveAlbum(album2);
 
         //dbArtist.deleteArtist(artist2.getId());

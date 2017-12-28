@@ -1,6 +1,8 @@
 <div>
     <p> Title: $album.getTitle()</p>
     <p> Artist: $album.getArtist().getName()</p>
+    <p> Quantity: $album.getQuantity()</p>
+    <p> Stock Level: $album.stockLevel()</p>
 </div>
  <a href="/albums/$album.getId()/edit" class="button center">Edit</a>
  <form action="/albums/$albums.getId()/delete" method="post">
