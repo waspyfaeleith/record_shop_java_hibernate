@@ -1,0 +1,23 @@
+<h2>Welcome to the app</h2>
+
+<a href="/artists" class="button center">Artists</a>
+
+<a href="/albums" class="button center">Albums</a>
+
+<h3>Current Stock</h3>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Quantity</th>
+        <th>Stock Level</th>
+    </tr>
+        #foreach($album in $stock)
+            <tr>
+                <td>$album.getTitle()</td>
+                <td>$album.getArtist().getName()</td>
+                <td>$album.getQuantity()</td>
+                <td>$album.stockLevel()</td>
+            <tr>
+        #end
+</table>

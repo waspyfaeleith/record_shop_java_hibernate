@@ -9,6 +9,7 @@
             <generator class="increment"/>
         </id>
         <property name = "title" column = "title" type = "string"/>
+        <property name = "quantity" column = "quantity" type = "integer"/>
         <many-to-one name="artist"
                      class="models.Artist"
                      column="artist_id"
