@@ -11,6 +11,6 @@ To create the tables you then need to run the sql file:
 
 This was built in IntelliJ IDEA Community Edition.
 
-To run the app, run the MainController class
+To run the app, run the `MainController` class
 
-If you open up a browswer and go to localhost:4567 then the app should be running
+If you open up a browser and go to `localhost:4567` then the app should be running
