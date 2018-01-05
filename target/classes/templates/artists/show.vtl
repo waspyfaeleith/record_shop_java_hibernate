@@ -1,7 +1,26 @@
 <div>
     <p> Name: $artist.getName()</p>
+
+     <a href="/artists/$artist.getId()/edit" class="button center">Edit</a>
+     <form action="/artists/$artist.getId()/delete" method="post">
+             <input type="submit" value="delete">
+     </form>
+
+    <h3>Albums:</h3>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Stock Level</th>
+        </tr>
+            #foreach($album in $artist.getAlbums())
+                <tr>
+                    <td>$album.getTitle()</td>
+                    <td>$album.getQuantity()</td>
+                    <td>$album.stockLevel()</td>
+                <tr>
+            #end
+    </table>
+
 </div>
- <a href="/artists/$artist.getId()/edit" class="button center">Edit</a>
- <form action="/artists/$artist.getId()/delete" method="post">
-         <input type="submit" value="delete">
- </form>
+

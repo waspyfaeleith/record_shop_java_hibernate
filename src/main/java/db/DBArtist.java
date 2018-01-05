@@ -90,11 +90,6 @@ public class DBArtist {
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-//            String queryString = "from Artist where id = :id";
-//            Query query = session.createQuery(queryString);
-//            query.setInteger("id", artist.getId());
-//            Artist artistToUpdate = (Artist) query.uniqueResult();
-//            artistToUpdate.setName(artist.getName());
             session.update(artist);
             transaction.commit();
         } catch (HibernateException e) {

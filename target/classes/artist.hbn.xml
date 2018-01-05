@@ -10,8 +10,8 @@
         </id>
         <property name = "name" column = "name" type = "string"/>
 
-        <set name="albums" inverse="true" cascade="all">
-            <key column="artist_id" not-null="true" />
+        <set name="albums" inverse="true" cascade="all" lazy="false">
+            <key column="artist_id" not-null="true"/>
             <one-to-many class="models.Album"/>
         </set>
 

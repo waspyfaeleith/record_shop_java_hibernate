@@ -49,9 +49,9 @@ public class Album {
     }
 
     public String stockLevel() {
-        if (quantity >= 10) {
+        if (this.quantity >= 10) {
             return "High";
-        } else if (quantity >= 5) {
+        } else if (this.quantity >= 5) {
             return "Medium";
         } else {
             return "Low";

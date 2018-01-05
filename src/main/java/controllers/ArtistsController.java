@@ -1,12 +1,14 @@
 package controllers;
 
 import db.DBArtist;
+import models.Album;
 import models.Artist;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import static spark.Spark.*;
 import static spark.SparkBase.staticFileLocation;
@@ -22,7 +24,10 @@ public class ArtistsController {
         staticFileLocation("/public");
 
         get("/artists/:id/edit", (req, res) -> {
-            Artist artist = DBArtist.getArtistById(Integer.parseInt(req.params(":id")));
+            String strId = req.params(":id");
+            Integer intId = Integer.parseInt(strId);
+            Artist artist = DBArtist.getArtistById(intId);
+            //Artist artist = DBArtist.getArtistById(Integer.parseInt(req.params(":id")));
             Map<String, Object> model = new HashMap<>();
             model.put("template", "templates/artists/edit.vtl");
             model.put("artist", artist);
@@ -37,7 +42,10 @@ public class ArtistsController {
 
 
         get("/artists/:id", (req, res) -> {
-            Artist artist = DBArtist.getArtistById(Integer.parseInt(req.params(":id")));
+            String strId = req.params(":id");
+            Integer intId = Integer.parseInt(strId);
+            Artist artist = DBArtist.getArtistById(intId);
+            //Artist artist = DBArtist.getArtistById(Integer.parseInt(req.params(":id")));
             Map<String, Object> model = new HashMap<>();
             model.put("template", "templates/artists/show.vtl");
             model.put("artist", artist);

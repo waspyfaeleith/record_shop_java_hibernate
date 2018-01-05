@@ -38,4 +38,6 @@ public class Artist {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
