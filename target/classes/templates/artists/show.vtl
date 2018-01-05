@@ -1,10 +1,5 @@
 <div>
-    <p> Name: $artist.getName()</p>
-
-     <a href="/artists/$artist.getId()/edit" class="button center">Edit</a>
-     <form action="/artists/$artist.getId()/delete" method="post">
-             <input type="submit" value="delete">
-     </form>
+    <p class="pageHeader">$artist.getName()</p>
 
     <h3>Albums:</h3>
     <table>
@@ -21,6 +16,12 @@
                 <tr>
             #end
     </table>
+
+    <a href="/artists/$artist.getId()/edit" class="button center">Edit</a>
+
+    <form action="/artists/$artist.getId()/delete" method="post">
+        <input type="submit" value="delete" class="button">
+    </form>
 
 </div>
 

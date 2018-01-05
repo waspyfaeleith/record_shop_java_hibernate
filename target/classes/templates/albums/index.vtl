@@ -1,12 +1,26 @@
+<p class="pageHeader">Albums</p>
+
 <div class="container">
-    <div class="centered">
-        <p class="answerIntro">Albums</p>
-          #foreach($album in $albums )
-            <p class="artist">$album.getTitle() : $album.getArtist().getName() $album.stockLevel()</p>
-            <a href="/albums/$album.getId()" class="button center">Details</a>
-          #end
-    </div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Quantity</th>
+            <th>Stock Level</th>
+            <th></th>
+            <th></th>
+        </tr>
+            #foreach($album in $albums)
+                <tr>
+                    <td>$album.getTitle()</td>
+                    <td>$album.getArtist().getName()</td>
+                    <td>$album.getQuantity()</td>
+                    <td>$album.stockLevel()</td>
+                    <td><a href="/albums/$album.getId()" class="button center">Details</a></td>
+                <tr>
+            #end
+    </table>
     <div>
-        <a href="/albums/new" class="button center">New Album</a>
+            <a href="/albums/new" class="button center">New Album</a>
     </div>
 </div>

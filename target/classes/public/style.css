@@ -20,26 +20,26 @@ body {
     margin-right: auto;
 }
 
-.questionText {
-    width: 70%;
-    height: 50px;
-    font-size: 0.6em;
-    border: 1px solid black;
+.formItem {
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.answerIntro {
-    font: bold 2.5em Arial;
-    text-align: center;
-    /*color: yellow;*/
-    margin-top: 50px;
+.inputbox {
+    font: 0.8em Arial;
+    width : 20%;
 }
 
-.answer {
-    /*font: bold 4.0em Arial;*/
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+.pageHeader {
+    font: bold 2.0em Arial;
     text-align: center;
-    color: yellow;
-    margin-top: 125px;
+    color: blue;
 }
 
 .button {

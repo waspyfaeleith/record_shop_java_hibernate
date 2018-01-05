@@ -1,6 +1,8 @@
+<p class="pageHeader">Edit Album</p>
+
 <form action="/albums/$album.getId()" method="post">
         <label for="title">Title:</label>
-        <input type="text" name="title" required="true" value="$album.getTitle()">
+        <input type="text" class="inputbox" name="title" required="true" value="$album.getTitle()">
 
         <label for="artist">Artist:</label>
         <select id="artist" name="artist">
@@ -14,7 +16,7 @@
         </select>
 
         <label for="quantity">Quantity:</label>
-        <input type="number" name="quantity" required="true" value="$album.getQuantity()">
+        <input type="number" class="inputbox" name="quantity" required="true" value="$album.getQuantity()">
 
-        <input type="submit" value="submit">
+        <input type="submit" value="Save" class="button">
 </form>

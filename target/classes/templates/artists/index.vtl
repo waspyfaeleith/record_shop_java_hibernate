@@ -1,12 +1,20 @@
+<p class="pageHeader">Artists</p>
+
+<div>
+    <a href="/artists/new" class="button center">New Artist</a>
+</div>
+
 <div class="container">
-    <div class="centered">
-        <p class="answerIntro">Artists</p>
-          #foreach($artist in $artists )
-            <p class="artist">$artist.getName()</p>
-            <a href="/artists/$artist.getId()" class="button center">Details</a>
-          #end
-    </div>
-    <div>
-        <a href="/artists/new" class="button center">New Artist</a>
-    </div>
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+            #foreach($artist in $artists )
+                <tr>
+                    <td>$artist.getName()</td>
+                    <td><a href="/artists/$artist.getId()" class="button center">Details</a></td>
+                <tr>
+            #end
+    </table>
 </div>

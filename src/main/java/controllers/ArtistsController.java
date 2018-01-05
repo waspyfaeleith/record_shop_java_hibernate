@@ -58,10 +58,6 @@ public class ArtistsController {
             model.put("template", "templates/artists/index.vtl");
             model.put("artists", artists);
 
-//            for (Artist a : artists) {
-//                System.out.println(a.getId() + " : " + a.getName());
-//            }
-
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
@@ -69,11 +65,6 @@ public class ArtistsController {
             DBArtist.deleteArtist(Integer.parseInt(req.params(":id")));
             res.redirect("/artists");
             return null;
-//            Map<String, Object> model = new HashMap<>();
-//            List<Artist> artists = DBArtist.getArtists();
-//            model.put("template", "templates/artists/index.vtl");
-//            model.put("artists", artists);
-//            return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
         post ("/artists", (req, res) -> {
@@ -82,11 +73,6 @@ public class ArtistsController {
             DBArtist.saveArtist(artist);
             res.redirect("/artists");
             return null;
-//            Map<String, Object> model = new HashMap<>();
-//            List<Artist> artists = DBArtist.getArtists();
-//            model.put("template", "templates/artists/index.vtl");
-//            model.put("artists", artists);
-//            return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
         post ("/artists/:id", (req, res) -> {
@@ -95,11 +81,6 @@ public class ArtistsController {
             DBArtist.updateArtist(artist);
             res.redirect("/artists");
             return null;
-//            Map<String, Object> model = new HashMap<>();
-//            List<Artist> artists = DBArtist.getArtists();
-//            model.put("template", "templates/artists/index.vtl");
-//            model.put("artists", artists);
-//            return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
 
