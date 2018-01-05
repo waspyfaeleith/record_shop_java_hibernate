@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db38a3fa-f4c2-4433-bcff-fac6bb4d91e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/style.css" afterPath="$PROJECT_DIR$/src/main/resources/public/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/albums/index.vtl" afterPath="$PROJECT_DIR$/src/main/resources/templates/albums/index.vtl" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.vtl" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.vtl" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/artists/show.vtl" afterPath="$PROJECT_DIR$/src/main/resources/templates/artists/show.vtl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -73,21 +71,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.vtl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/albums/edit.vtl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.vtl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artists/index.vtl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.vtl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artists/show.vtl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -150,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/ArtistsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/albums/show.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/artists/index.vtl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/artists/show.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/artists/edit.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/artists/create.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/albums/create.vtl" />
@@ -159,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/albums/index.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/main.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/public/style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/artists/show.vtl" />
       </list>
     </option>
   </component>
@@ -899,14 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artists/show.vtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artists/create.vtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -927,14 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artists/index.vtl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -990,6 +972,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artists/index.vtl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artists/show.vtl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding />
         </state>
       </provider>
