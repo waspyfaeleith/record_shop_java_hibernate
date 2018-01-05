@@ -1,7 +1,15 @@
+html {
+    background-image: url('/images/turntable.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 body {
     /*background-color : green;*/
     font-family: Verdana, Arial, Helvetica, sans-serif;
     align : center;
+
 }
 
 .header {
@@ -12,6 +20,12 @@ body {
 .center {
    margin-left: auto;
    margin-right: auto;
+}
+
+table {
+  min-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .centered {
@@ -31,9 +45,23 @@ body {
     width : 20%;
 }
 
+
+.Low {
+    color : red;
+}
+
+.High {
+    color : green;
+}
+
+.Medium {
+    color : orange;
+}
+
 th, td {
     padding: 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 .pageHeader {
@@ -53,5 +81,4 @@ th, td {
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
   margin: 0 auto;
-
 }
